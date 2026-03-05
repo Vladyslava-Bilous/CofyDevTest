@@ -1,0 +1,8 @@
+{
+  "TestConfiguration": {
+    "Environment": "Beta",
+    "UIURL": "https://www.beta.commify.com",
+    "APIURL": "https://api.beta.commify.dev",
+    "Browser": "Chrome"
+  }
+}
