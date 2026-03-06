@@ -1,8 +1,9 @@
-using CofyDevTest.Core.API.Auth;
-using CofyDevTest.Core.API.User;
 using CofyDevTest.API.TestData;
 using CofyDevTest.Core.API;
+using CofyDevTest.Core.API.Auth;
 using CofyDevTest.Core.API.LoginFailTotal;
+using CofyDevTest.Core.API.User;
+using NUnit.Framework;
 
 namespace CofyDevTest.API.Tests
 {
@@ -158,7 +159,7 @@ namespace CofyDevTest.API.Tests
             Assert.That(loginFailTotalResponse.IsSuccessStatusCode, Is.True);
 
             var newToken = new AuthenticationApi().GetToken(userToReset).GetAwaiter().GetResult();
-            Assert.That(newToken, Is.Not.Null.Or.Empty);
+            Assert.IsFalse(string.IsNullOrEmpty(newToken));
         }
 
         [OneTimeTearDown]
