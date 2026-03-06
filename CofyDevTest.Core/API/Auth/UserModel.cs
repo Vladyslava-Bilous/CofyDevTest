@@ -1,4 +1,4 @@
-﻿namespace CofyDevTest.Core.Helpers.Models
+﻿namespace CofyDevTest.Core.API.Auth
 {
     public class UserModel
     {

@@ -1,12 +1,12 @@
 ﻿using System.Net.Http.Headers;
 
-namespace CofyDevTest.API
+namespace CofyDevTest.Core.API.Auth
 {
     public class AuthHandler : DelegatingHandler
     {
         public string Token { get; }
 
-        internal AuthHandler(string token)
+        public AuthHandler(string token)
         {
             Token = token;
         }

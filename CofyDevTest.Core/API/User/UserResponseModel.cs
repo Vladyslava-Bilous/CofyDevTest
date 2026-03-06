@@ -1,4 +1,4 @@
-﻿namespace CofyDevTest.API.Models
+﻿namespace CofyDevTest.Core.API.User
 {
     public class UserResponseModel
     {

@@ -14,11 +14,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.3" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="10.0.3" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.3" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.3" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="NUnit" Version="4.5.0" />
@@ -38,6 +33,10 @@
 
   <ItemGroup>
     <Folder Include="Features\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CofyDevTest.Core\CofyDevTest.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

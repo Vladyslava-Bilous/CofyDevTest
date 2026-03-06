@@ -1,10 +1,10 @@
-﻿namespace CofyDevTest.Core.Helpers
+﻿namespace CofyDevTest.Core
 {
     public class TestConfiguration
     {
         public string Environment { get; set; }
-        public string UIURL { get; set; }
+        public string? UIURL { get; set; }
         public string APIURL { get; set; }
-        public Browser Browser { get; set; }
+        public string? Browser { get; set; }
     }
 }

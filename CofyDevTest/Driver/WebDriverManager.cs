@@ -1,17 +1,16 @@
-﻿using CofyDevTest.Core.Helpers;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
 
-namespace CofyDevTest.Core.Driver
+namespace CofyDevTest.UI.Driver
 {
     public sealed class WebDriverManager
     {
         private static readonly object Sync = new();
         private static IWebDriver? _webDriverInstance;
 
-        public static IWebDriver GetWebDriver(Browser browser)
+        public static IWebDriver GetWebDriver(string browser)
         {
             lock (Sync)
             {
@@ -25,22 +24,22 @@ namespace CofyDevTest.Core.Driver
             }
         }
 
-        private static IWebDriver BuildDriver(Browser browser)
+        private static IWebDriver BuildDriver(string browser)
         {
-            switch (browser)
+            switch (browser.ToLowerInvariant())
             {
-                case Browser.Chrome:
+                case "chrome":
                     var chromeOptions = new ChromeOptions();
                     chromeOptions.AddArgument("--start-maximized");
                     chromeOptions.AddArgument("--disable-extensions");
                     return new ChromeDriver(ChromeDriverService.CreateDefaultService(), chromeOptions);
 
-                case Browser.Firefox:
+                case "firefox":
                     var firefoxOptions = new FirefoxOptions();
                     firefoxOptions.AddArgument("--start-maximized");
                     return new FirefoxDriver(FirefoxDriverService.CreateDefaultService(), firefoxOptions);
 
-                case Browser.Edge:
+                case "edge":
                     var edgeOptions = new EdgeOptions();
                     edgeOptions.AddArgument("start-maximized");
                     return new EdgeDriver(EdgeDriverService.CreateDefaultService(), edgeOptions);

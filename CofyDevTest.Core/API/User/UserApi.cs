@@ -1,9 +1,8 @@
 ﻿using System.Text.Json;
-using CofyDevTest.API.Models;
-using CofyDevTest.Core.Helpers;
+using CofyDevTest.Core.API.Auth;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CofyDevTest.API
+namespace CofyDevTest.Core.API.User
 {
     public class UserApi(AuthHandler authHandler)
     {
@@ -17,7 +16,7 @@ namespace CofyDevTest.API
 
         public async Task<UserResponseModel?> GetUser(string userEmail)
         {
-            var response = await _httpClient.GetAsync(userEmail);
+            var response = await _httpClient.GetAsync($"/user?email={userEmail}");
             var content = await response.Content.ReadAsStreamAsync();
             return await JsonSerializer.DeserializeAsync<UserResponseModel>(content);
         }

@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace CofyDevTest.Core.Helpers
+namespace CofyDevTest.UI.Helpers
 {
     public static class WebElementExtensions
     {

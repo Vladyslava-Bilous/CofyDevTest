@@ -1,7 +1,7 @@
-﻿using CofyDevTest.Core.Helpers;
+﻿using CofyDevTest.UI.Helpers;
 using OpenQA.Selenium;
 
-namespace CofyDevTest.Pages
+namespace CofyDevTest.UI.Pages
 {
     public class HomePage : BasePage
     {

@@ -1,9 +1,9 @@
-﻿using CofyDevTest.Core.Driver;
-using CofyDevTest.Core.Helpers;
+﻿using CofyDevTest.Core;
+using CofyDevTest.UI.Driver;
 using Microsoft.Testing.Platform.Services;
 using OpenQA.Selenium;
 
-namespace CofyDevTest.Pages
+namespace CofyDevTest.UI.Pages
 {
     public abstract class BasePage
     {

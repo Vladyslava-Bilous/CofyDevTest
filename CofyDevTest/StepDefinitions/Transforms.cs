@@ -1,8 +1,8 @@
-﻿using CofyDevTest.Core.Helpers.Models;
-using CofyDevTest.TestData;
+﻿using CofyDevTest.Core.API.Auth;
+using CofyDevTest.UI.TestData;
 using Reqnroll;
 
-namespace CofyDevTest.StepDefinitions
+namespace CofyDevTest.UI.StepDefinitions
 {
     [Binding]
     public class Transforms

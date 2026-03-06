@@ -1,0 +1,6 @@
+{
+  "TestConfiguration": {
+    "Environment": "Beta",
+    "APIURL": "https://api.beta.commify.dev"
+  }
+}

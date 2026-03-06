@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CofyDevTest.Core.Helpers
+namespace CofyDevTest.Core
 {
     public  sealed class TestBootstrap
     {

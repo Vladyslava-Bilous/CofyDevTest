@@ -1,7 +1,7 @@
-﻿using CofyDevTest.Core.Driver;
+﻿using CofyDevTest.UI.Driver;
 using Reqnroll;
 
-namespace CofyDevTest.StepDefinitions.UI
+namespace CofyDevTest.UI.StepDefinitions.UI
 {
     [Binding]
     public static class Hooks

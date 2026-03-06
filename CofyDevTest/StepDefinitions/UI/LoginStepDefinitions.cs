@@ -1,8 +1,8 @@
-using CofyDevTest.Core.Helpers.Models;
-using CofyDevTest.Pages;
+using CofyDevTest.Core.API.Auth;
+using CofyDevTest.UI.Pages;
 using Reqnroll;
 
-namespace CofyDevTest.StepDefinitions.UI
+namespace CofyDevTest.UI.StepDefinitions.UI
 {
     [Binding]
     public class LoginStepDefinitions

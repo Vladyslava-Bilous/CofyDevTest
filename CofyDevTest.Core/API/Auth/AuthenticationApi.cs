@@ -1,10 +1,8 @@
-﻿using CofyDevTest.Core.Helpers;
-using CofyDevTest.Core.Helpers.Models;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace CofyDevTest.API
+namespace CofyDevTest.Core.API.Auth
 {
-    public class AuthApi
+    public class AuthenticationApi
     {
         private readonly HttpClient _httpClient = new() { BaseAddress = new Uri(TestConfiguration.APIURL) };
         private static readonly TestConfiguration TestConfiguration =
@@ -12,12 +10,17 @@ namespace CofyDevTest.API
 
         public async Task<string> GetToken(UserModel user)
         {
+            return await GetToken(user.UserEmail, user.UserPassword);
+        }        
+        
+        public async Task<string> GetToken(string userEmail, string userPassword)
+        {
             var httpRequest = new HttpRequestMessage(HttpMethod.Post, "/auth")
             {
                 Content = new FormUrlEncodedContent(new List<KeyValuePair<string, string>>
                 {
-                    new("username", user.UserEmail),
-                    new("password", user.UserPassword)
+                    new("username", userEmail),
+                    new("password", userPassword)
                 })
             };
 

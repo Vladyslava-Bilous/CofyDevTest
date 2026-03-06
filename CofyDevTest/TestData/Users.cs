@@ -1,6 +1,6 @@
-﻿using CofyDevTest.Core.Helpers.Models;
+﻿using CofyDevTest.Core.API.Auth;
 
-namespace CofyDevTest.TestData
+namespace CofyDevTest.UI.TestData
 {
     //Users' data may be passed in another way, if it's differ for different environments.
     //For example, from config files.
