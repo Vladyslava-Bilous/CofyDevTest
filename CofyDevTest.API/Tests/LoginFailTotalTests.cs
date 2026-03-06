@@ -3,7 +3,6 @@ using CofyDevTest.Core.API;
 using CofyDevTest.Core.API.Auth;
 using CofyDevTest.Core.API.LoginFailTotal;
 using CofyDevTest.Core.API.User;
-using NUnit.Framework;
 
 namespace CofyDevTest.API.Tests
 {
