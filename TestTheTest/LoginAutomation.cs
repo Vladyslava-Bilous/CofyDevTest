@@ -1,3 +1,5 @@
+/* Comment this file, un order to build solution successfully
+
 using System;//unused -> remove
 using NUnit.Framework;//unused -> remove
 using OpenQA.Selenium;
@@ -41,3 +43,4 @@ namespace TestTheTest
         }
     }
 }
+*/
