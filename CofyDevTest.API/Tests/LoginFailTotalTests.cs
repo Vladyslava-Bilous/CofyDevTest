@@ -28,7 +28,7 @@ namespace CofyDevTest.API.Tests
         [SetUp]
         public void SetUp()
         {
-            FailLoginAs(Users.LoginFail1, 1);
+            FailLoginAs(Users.LoginFail1);
             FailLoginAs(Users.LoginFail3, 3);
             FailLoginAs(Users.LoginFail5, 5);
             FailLoginAs(Users.LoginFail10, 10);
@@ -47,6 +47,8 @@ namespace CofyDevTest.API.Tests
         {
             //login with valid credentials, to make sure that failed login attempts are count correctly
             new AuthenticationApi().GetToken(user).GetAwaiter().GetResult();
+            TestContext.WriteLine($"User {user.UserEmail} logged in successfully.");
+
             for (var i = 1; i <= countOfFailedLoginAttempt; i++)
             {
                 try
